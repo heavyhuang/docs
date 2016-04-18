@@ -45,7 +45,7 @@ source ~/catkin_ws/devel/setup.bash
 ```Bash
 sudo rosdep init
 rosdep update
-```           
+```
 ###三．使用hector-slam
 
 1.终端输入：
@@ -86,5 +86,18 @@ rosmake ethzasl_icp_mapping
 `~/.bashrc`末尾加入：
 ```Bash
 export ROS_PACKAGE_PATH=/work/ros/ethzasl_icp_mapping:$ROS_PACKAGE_PATH
+```
+###五．其它常用插件
+
+节点状态图[rqt_graph](http://wiki.ros.org/rqt_graph#Example)（替代rxgraph）:
+```Bash
+yaourt --noconfirm ros-indigo-rqt
+```
+
+###六．入门范例
+```Bash
+roscore$
+rosrun turtlesim turtlesim_node$
+rosrun turtlesim turtle_teleop_key
 ```
 
