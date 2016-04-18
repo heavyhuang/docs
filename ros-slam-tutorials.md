@@ -45,31 +45,32 @@ source ~/catkin_ws/devel/setup.bash
 ```Bash
 sudo rosdep init
 rosdep update
-```
+```           
 ###三．使用hector-slam
 
 1.终端输入：
 ```Bash
 yaourt --noconfirm ros-indigo-hector-slam
 ```
-2.下载[bag](https://code.google.com/p/tu-darmstadt-ros-pkg/downloads/list)文件
-
-3.终端输入：
-```Bash
-roscore
-```
-4.新终端输入： 
-```Bash
-roslaunch hector_slam_launch tutorial.launch
-```
-5.新终端输入： 
-```Bash
-rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
-```
-6.`~/.bashrc`末尾加入：
+2.`~/.bashrc`末尾加入：
 ```Bash
 export ROS_PACKAGE_PATH=/opt/ros/indigo/share/hector_slam_launch:$ROS_PACKAGE_PATH
 ```
+3.下载[bag](https://code.google.com/p/tu-darmstadt-ros-pkg/downloads/list)文件
+
+4.终端输入：
+```Bash
+roscore
+```
+5.新终端输入： 
+```Bash
+roslaunch hector_slam_launch tutorial.launch
+```
+6.新终端输入： 
+```Bash
+rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
+```
+
 ![](https://github.com/heavyhuang/docs/blob/master/pic/ros-slam.png)
 
 ###四．安装[ethzasl_icp_mapping](http://wiki.ros.org/ethzasl_icp_configuration)
