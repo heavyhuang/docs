@@ -68,6 +68,8 @@
 
 	export ROS_PACKAGE_PATH=/opt/ros/indigo/share/hector_slam_launch:$ROS_PACKAGE_PATH
 
+![](https://github.com/heavyhuang/docs/pic/ros-slam.png)
+
 ###四．安装[ethzasl_icp_mapping](http://wiki.ros.org/ethzasl_icp_configuration)
 终端输入：
 
