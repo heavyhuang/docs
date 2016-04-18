@@ -2,7 +2,7 @@
 ------------------------------------------------
 ------------------------------------------------
 
-###一．arch上安装[ROS](http://wiki.ros.org/indigo/Installation/Arch)
+### 一．arch上安装[ROS](http://wiki.ros.org/indigo/Installation/Arch)
 
 
 ```Bash
@@ -13,7 +13,7 @@ yaourt --noconfirm rosmake
 yaourt --noconfirm vtk
 yaourt --noconfirm glx
 ```	
-####安装[catkin](http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
+#### 安装[catkin](http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 在终端输入：
 ```Bash
 source /opt/ros/indigo/setup.bash
@@ -23,7 +23,8 @@ catkin_init_workspace
 cd ~/catkin_ws/
 catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so
 ```	
-`~/.bashrc`中加入：
+
+`~/.bashrc中加入`：   
 ```Bash
 # ROS
 indigo() {
@@ -41,12 +42,13 @@ indigo() {
 } 
 source ~/catkin_ws/devel/setup.bash
 ```
+
 终端输入：
 ```Bash
 sudo rosdep init
 rosdep update
 ```
-###三．使用hector-slam
+### 三．使用hector-slam
 
 1.终端输入：
 ```Bash
@@ -73,7 +75,7 @@ rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
 
 ![](https://github.com/heavyhuang/docs/blob/master/pic/ros-slam.png)
 
-###四．安装[ethzasl_icp_mapping](http://wiki.ros.org/ethzasl_icp_configuration)
+### 四．安装[ethzasl_icp_mapping](http://wiki.ros.org/ethzasl_icp_configuration)
 终端输入：
 ```Bash
 git clone --recursive git://github.com/ethz-asl/ethzasl_icp_mapping.git
@@ -87,14 +89,15 @@ rosmake ethzasl_icp_mapping
 ```Bash
 export ROS_PACKAGE_PATH=/work/ros/ethzasl_icp_mapping:$ROS_PACKAGE_PATH
 ```
-###五．其它常用插件
+### 五．其它常用插件
 
 节点状态图[rqt_graph](http://wiki.ros.org/rqt_graph#Example)（替代rxgraph）:
 ```Bash
 yaourt --noconfirm ros-indigo-rqt
 ```
+相关书籍源码[链接1](https://www.packtpub.com/hardware-and-creative/learning-ros-robotics-programming) [链接2](https://www.packtpub.com/hardware-and-creative/learning-ros-robotics-programming-second-edition)
 
-###六．入门范例
+### 六．入门范例
 ```Bash
 roscore$
 rosrun turtlesim turtlesim_node$
