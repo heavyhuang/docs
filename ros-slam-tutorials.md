@@ -91,7 +91,7 @@ export ROS_PACKAGE_PATH=/work/ros/ethzasl_icp_mapping:$ROS_PACKAGE_PATH
 ```
 ### 五．其它常用插件
 
-节点状态图[rqt_graph](http://wiki.ros.org/rqt_graph#Example)（替代rxgraph）:
+状态图[rqt_graph](http://wiki.ros.org/rqt_graph#Example)（indigo中没有搜到rxgraph）:
 ```Bash
 yaourt --noconfirm ros-indigo-rqt
 ```
