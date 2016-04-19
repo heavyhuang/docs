@@ -6,7 +6,7 @@
 
 - 若更新后界面出现显示问题，可在优化工具里更换主题
 - 使用Shell找寻文本中出现频率最高10个字符串
-方法一：
+`方法一：`
 ```Bash
 #!/bin/sh
 cat file.txt |awk '{
@@ -18,7 +18,7 @@ END{
 	}
 }|sort -nr |head -n 10
 ```
-方法二：
+`方法二：`
 ```Bash
 sort file.txt |uniq -c |sort -nr|head -n 10
 ```
@@ -31,7 +31,7 @@ module unload Python/2.7.9-fPIC Python/2.7.9
 module list
 export PKG_CONFIG_PATH=/HOME/nsfc2015_304/share/pkgconfig 
 ```
-pkgconfig中放有
+`pkgconfig中放有`
 ```Bash
 $ cat pkgconfig/opencv.pc 
 #Package Information for pkg-config
