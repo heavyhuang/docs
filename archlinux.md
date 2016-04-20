@@ -47,3 +47,42 @@ Libs: -L${exec_prefix}/lib  -lopencv_stitching -lopencv_objdetect -lopencv_super
 Libs.private: -L/lib64 -lwebp -lpng -lz -ltiff -ljasper -ljpeg -lImath -lIlmImf -lIex -lHalf -lIlmThread -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgthread-2.0 -lgstvideo-1.0 -lgstapp-1.0 -lgstbase-1.0 -lgstriff-1.0 -lgstpbutils-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -ldc1394 -lv4l1 -lv4l2 -lavcodec -lavformat -lavutil -lswscale -lavresample -lgphoto2 -lgphoto2_port -lexif -lbz2 -ldl -lm -lpthread -lrt
 Cflags: -I${includedir_old} -I${includedir_new}
 ```
+－ mutt自动收发邮件脚本
+```Bash
+#!/bin/bash
+echo begin getmail
+getmail -v -n 
+cd ./temp
+if test 0 -ne `ls ./ |wc -l`
+then
+rm ./*
+fi
+if test 0 -ne `ls ../homework/ |wc -l`
+then
+rm ../homework/*
+fi
+touch test.log
+ls ~/Mail/inbox/new/ |awk '{
+	temp_cat="cat ~/Mail/inbox/new/"$NF"|grep -e ^From:  >> test.log"
+	temp_munpack="munpack ~/Mail/inbox/new/"$NF" >>test.log"
+	system(temp_cat) 
+	system(temp_munpack)
+}'
+sed  '/@/{N;s/\n/ /};s/.*<//g;s/>//g;s/(.*)//g' test.log >test2.log
+ 
+cat ./test2.log |awk '{
+	print $2
+	temp_cp="cp "$2" ../homework/ans_"$2
+	system(temp_cp)
+}'
+
+cat ./test2.log |awk '{
+temp1="echo homework results |mutt -s homework "$1" -a ../homework/ans_"$2 
+system(temp1)
+}'
+if test 0 -ne `ls ~/Mail/inbox/new/ |wc -l`
+then
+mv ~/Mail/inbox/new/* ~/Mail/inbox/cur/
+fi
+echo end send mail
+```
