@@ -129,3 +129,38 @@ Jvm要求对象起始地址必须是8字节的整数倍。当对象实例数据�
 - 并发标记：耗时较长，标记时产生的变化放入线程Remembered Set Logs中。
 - 最终标记（Stop The World，可并行）：Remembered Set Logs合并到Remembered Set中。
 - 筛选回收：区域价值成本排序，根据排序回收。
+
+## 五.回收策略
+### 对象优先在Eden分配
+- Mirror GC：发生在新生代，非常频繁，回收速度快。
+- Major GC / Full GC：发生在老年代，一般比Minor GC慢十倍以上。
+
+### 大对象直接进入老年代
+- 大对象指需要连续内存空间的对象，如长字符串、大数组。
+- -XX：PretenureSizeThreshold参数：设置大于该参数的直接分配在老年代。
+
+### 长期存活的对象将进入老年代
+- -XX:MaxTenuringThreshold参数：晋升老年代阈值
+
+### 动态对象年龄判定
+- 相同年龄所有对象大小总和大于Survivor一半，大于等于该年龄的直接进入老年代。
+
+### 空间分配担保
+- Minor GC前，JVM会检查老年代最大可用连续空间是否大于新生代对象总空间，若大于，则说明Minor GC安全。
+- HandlePromotionFailure参数:允许冒险
+- 若小于，且设置不允许冒险，则进行Full GC.
+
+## 六.JVM常用工具
+
+### JDK命令行工具
+- `jps`:虚拟机进程状况
+- `jstat`:统计虚拟机信息
+- `jinfo`: Java配置信息
+- `jmap`: Java内存映像，获取dump文件（堆转储快照）
+- `jhat`: dump分析工具
+- `jstack`: Java堆栈跟踪工具
+- `HSDIS`： JIT生成代码反汇编
+
+### JDK可视化工具
+- `JConsole`： Java监视与管理控制台
+- `VisualVM`: 多合一故障处理工具
