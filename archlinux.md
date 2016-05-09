@@ -47,7 +47,7 @@ Libs: -L${exec_prefix}/lib  -lopencv_stitching -lopencv_objdetect -lopencv_super
 Libs.private: -L/lib64 -lwebp -lpng -lz -ltiff -ljasper -ljpeg -lImath -lIlmImf -lIex -lHalf -lIlmThread -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgthread-2.0 -lgstvideo-1.0 -lgstapp-1.0 -lgstbase-1.0 -lgstriff-1.0 -lgstpbutils-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -ldc1394 -lv4l1 -lv4l2 -lavcodec -lavformat -lavutil -lswscale -lavresample -lgphoto2 -lgphoto2_port -lexif -lbz2 -ldl -lm -lpthread -lrt
 Cflags: -I${includedir_old} -I${includedir_new}
 ```
-－ mutt自动收发邮件脚本
+- mutt自动收发邮件脚本 
 ```Bash
 #!/bin/bash
 echo begin getmail
@@ -68,14 +68,12 @@ ls ~/Mail/inbox/new/ |awk '{
 	system(temp_cat) 
 	system(temp_munpack)
 }'
-sed  '/@/{N;s/\n/ /};s/.*<//g;s/>//g;s/(.*)//g' test.log >test2.log
- 
+sed  '/@/{N;s/\n/ /};s/.*<//g;s/>//g;s/(.*)//g' test.log >test2.log 
 cat ./test2.log |awk '{
 	print $2
 	temp_cp="cp "$2" ../homework/ans_"$2
 	system(temp_cp)
 }'
-
 cat ./test2.log |awk '{
 temp1="echo homework results |mutt -s homework "$1" -a ../homework/ans_"$2 
 system(temp1)
@@ -86,14 +84,13 @@ mv ~/Mail/inbox/new/* ~/Mail/inbox/cur/
 fi
 echo end send mail
 ```
-
-－ 查找含有某字符串的所有文件
+- 查找含有某字符串的所有文件
 `grep -rni LogisticRegressionOutput*`
-* : 表示当前目录所有文件，也可以是某个文件名
--r 是递归查找
--n 是显示行号
--R 查找所有文件包含子目录
--i 忽略大小写
+`*` : 表示当前目录所有文件，也可以是某个文件名
+`-r` 是递归查找
+`-n` 是显示行号
+`-R` 查找所有文件包含子目录
+`-i` 忽略大小写
 下面是一些有意思的命令行参数：
 `grep -i pattern files`：不区分大小写地搜索。默认情况区分大小写。 
 `grep -l pattern files`：只列出匹配的文件名。
