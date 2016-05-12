@@ -84,6 +84,7 @@ mv ~/Mail/inbox/new/* ~/Mail/inbox/cur/
 fi
 echo end send mail
 ```
+
 - 查找含有某字符串的所有文件`grep -rni LogisticRegressionOutput*`
 `*` : 表示当前目录所有文件，也可以是某个文件名
 `-r` 是递归查找
