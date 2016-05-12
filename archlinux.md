@@ -31,7 +31,7 @@ module unload Python/2.7.9-fPIC Python/2.7.9
 module list
 export PKG_CONFIG_PATH=/HOME/nsfc2015_304/share/pkgconfig 
 ```
-`pkgconfig中放有`
+`pkgconfig`中放有
 ```Bash
 $ cat pkgconfig/opencv.pc 
 #Package Information for pkg-config
@@ -84,6 +84,7 @@ mv ~/Mail/inbox/new/* ~/Mail/inbox/cur/
 fi
 echo end send mail
 ```
+
 - 查找含有某字符串的所有文件
 `grep -rni LogisticRegressionOutput*`
 `*` : 表示当前目录所有文件，也可以是某个文件名
@@ -100,4 +101,6 @@ echo end send mail
 `grep pattern1 | pattern2 files`：显示匹配`pattern1`或`pattern2`的行。 
 `grep pattern1 files | grep pattern2`：显示既匹配`pattern1`又匹配`pattern2`的行。
 
+
 - ```lsof```列出系统打开的文件
+lsof -i 用以显示符合条件的进程情况
