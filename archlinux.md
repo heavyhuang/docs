@@ -98,6 +98,7 @@ echo end send mail
 `grep -C number pattern files`：匹配的上下文分别显示`[number]`行。 
 `grep pattern1 | pattern2 files`：显示匹配`pattern1`或`pattern2`的行。 
 `grep pattern1 files | grep pattern2`：显示既匹配`pattern1`又匹配`pattern2`的行。
+
 - `lsof`列出系统打开的文件
 - `lsof -i` 用以显示符合条件的进程情况
 - `netstat -nap | grep 10022`列出端口10022的使用情况。
