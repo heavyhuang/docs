@@ -5,6 +5,7 @@
 - yaourt --noconfirm packge-name #自动编译安装，有时需输入密码
 
 - 若更新后界面出现显示问题，可在优化工具里更换主题
+
 - 使用Shell找寻文本中出现频率最高10个字符串
 `方法一：`
 ```Bash
@@ -22,6 +23,7 @@ END{
 ```Bash
 sort file.txt |uniq -c |sort -nr|head -n 10
 ```
+
 - 天河二号中module配置
 ```Bash
 #!/bin/bash
@@ -47,6 +49,7 @@ Libs: -L${exec_prefix}/lib  -lopencv_stitching -lopencv_objdetect -lopencv_super
 Libs.private: -L/lib64 -lwebp -lpng -lz -ltiff -ljasper -ljpeg -lImath -lIlmImf -lIex -lHalf -lIlmThread -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgthread-2.0 -lgstvideo-1.0 -lgstapp-1.0 -lgstbase-1.0 -lgstriff-1.0 -lgstpbutils-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -ldc1394 -lv4l1 -lv4l2 -lavcodec -lavformat -lavutil -lswscale -lavresample -lgphoto2 -lgphoto2_port -lexif -lbz2 -ldl -lm -lpthread -lrt
 Cflags: -I${includedir_old} -I${includedir_new}
 ```
+
 - mutt自动收发邮件脚本 
 ```Bash
 #!/bin/bash
@@ -99,7 +102,7 @@ echo end send mail
 `grep -C number pattern files`：匹配的上下文分别显示`[number]`行。 
 `grep pattern1 | pattern2 files`：显示匹配`pattern1`或`pattern2`的行。 
 `grep pattern1 files | grep pattern2`：显示既匹配`pattern1`又匹配`pattern2`的行。
-
 - `lsof`列出系统打开的文件
 - `lsof -i` 用以显示符合条件的进程情况
+
 - `netstat -nap | grep 10022`列出端口10022的使用情况。
