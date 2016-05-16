@@ -94,7 +94,6 @@ echo end send mail
 `-n` 是显示行号
 `-R` 查找所有文件包含子目录
 `-i` 忽略大小写
-下面是一些有意思的命令行参数：
 `grep -i pattern files`：不区分大小写地搜索。默认情况区分大小写。 
 `grep -l pattern files`：只列出匹配的文件名。
 `grep -L pattern files`：列出不匹配的文件名。 
