@@ -51,7 +51,7 @@ Cflags: -I${includedir_old} -I${includedir_new}
 ```
 
 - mutt自动收发邮件脚本 
-```Bash
+	```Bash
 #!/bin/bash
 echo begin getmail
 getmail -v -n 
@@ -89,7 +89,7 @@ echo end send mail
 ```
 
 - 查找含有某字符串的所有文件`grep -rni LogisticRegressionOutput*`
-```
+	```
 `*`: 表示当前目录所有文件，也可以是某个文件名
 `-r` 是递归查找
 `-n` 是显示行号
@@ -111,3 +111,10 @@ echo end send mail
   ```
 
 - `netstat -nap | grep 10022`列出端口10022的使用情况。
+
+- 查看线程占用
+	```
+`top -H`:一行显示一个线程。
+`ps xH`:查看所有存在的线程。
+`ps -mp <PID>`:查看一个进程起的线程数。
+```
