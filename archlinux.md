@@ -74,7 +74,6 @@ ls ~/Mail/inbox/new/ |awk '{
 	system(temp_munpack)
 }'
 sed  '/@/{N;s/\n/ /};s/.*<//g;s/>//g;s/(.*)//g' test.log >test2.log
- 
 cat ./test2.log |awk '{
 	print $2
 	temp_pyrun="python3 ../barcodes_evaluation.py "$2"  ../barcodes_gt_test.txt > ../homework/ans_"$2
