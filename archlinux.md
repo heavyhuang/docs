@@ -51,7 +51,7 @@ Cflags: -I${includedir_old} -I${includedir_new}
 ```
 
 - mutt自动收发邮件脚本 
- ```Bash
+```Bash
 #!/bin/bash
 while true
 do
@@ -77,7 +77,6 @@ sed  '/@/{N;s/\n/ /};s/.*<//g;s/>//g;s/(.*)//g' test.log >test2.log
  
 cat ./test2.log |awk '{
 	print $2
-	#temp_cp="cp "$2" ../homework/ans_"$2
 	temp_pyrun="python3 ../barcodes_evaluation.py "$2"  ../barcodes_gt_test.txt > ../homework/ans_"$2
 	system(temp_pyrun)
 }'
