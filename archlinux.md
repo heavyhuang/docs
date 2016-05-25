@@ -51,7 +51,7 @@ Cflags: -I${includedir_old} -I${includedir_new}
 ```
 
 - mutt自动收发邮件脚本 
-	```Bash
+```Bash
 #!/bin/bash
 while true
 do
@@ -82,8 +82,7 @@ cat ./test2.log |awk '{
 	system(temp_pyrun)
 }'
 cat ./test2.log |awk '{
-temp1="echo homework results |mutt -s homework "$1" -a ../homework/ans_"$2 
-#temp1="echo homework results |mutt -s homework heavyhuangpc@163.com -a ../homework/ans_"$2 
+temp1="echo homework results |mutt -s homework "$1" -a ../homework/ans_"$2  
 system(temp1)
 }'
 if test 0 -ne `ls ~/Mail/inbox/new/ |wc -l`
