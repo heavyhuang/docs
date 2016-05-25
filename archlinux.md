@@ -51,7 +51,7 @@ Cflags: -I${includedir_old} -I${includedir_new}
 ```
 
 - mutt自动收发邮件脚本 
-```Bash
+ ```Bash
 #!/bin/bash
 while true
 do
