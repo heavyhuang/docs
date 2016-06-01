@@ -53,8 +53,7 @@ Cflags: -I${includedir_old} -I${includedir_new}
 - mutt自动收发邮件脚本 
   ```Bash
 #!/bin/bash
-while true
-do
+cd /work/ali/shell
 echo begin getmail
 getmail -v -n 
 cd ./temp
@@ -73,14 +72,15 @@ ls ~/Mail/inbox/new/ |awk '{
 	system(temp_cat) 
 	system(temp_munpack)
 }'
-sed  '/@/{N;s/\n/ /};s/.*<//g;s/>//g;s/(.*)//g' test.log >test2.log
+sed  '/@/{N;s/\n/ /};s/.*<//g;s/>//g;s/(.*)//g' test.log >test2.log 
 cat ./test2.log |awk '{
 	print $2
+	#temp_cp="cp "$2" ../homework/ans_"$2
 	temp_pyrun="python3 ../barcodes_evaluation.py "$2"  ../barcodes_gt_test.txt > ../homework/ans_"$2
 	system(temp_pyrun)
 }'
 cat ./test2.log |awk '{
-temp1="echo homework results |mutt -s homework "$1" -a ../homework/ans_"$2  
+temp1="echo homework results |mutt -s homework "$1" -a ../homework/ans_"$2 
 system(temp1)
 }'
 if test 0 -ne `ls ~/Mail/inbox/new/ |wc -l`
@@ -89,8 +89,11 @@ mv ~/Mail/inbox/new/* ~/Mail/inbox/cur/
 fi
 echo end send mail
 cd ..
-sleep 5000 
-done
+```
+启动定时脚本`systemctl start cronie.service`
+  `crontab -l`
+  ```Bash
+  0 * * * * /work/ali/shell/reply_homework.sh
 ```
 
 - 查找含有某字符串的所有文件`grep -rni LogisticRegressionOutput*`
