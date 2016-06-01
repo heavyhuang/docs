@@ -53,7 +53,7 @@ Cflags: -I${includedir_old} -I${includedir_new}
 - mutt自动收发邮件脚本 
   ```Bash
 #!/bin/bash
-cd /work/ali/shell
+cd /path
 echo begin getmail
 getmail -v -n 
 cd ./temp
