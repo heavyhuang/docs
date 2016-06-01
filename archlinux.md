@@ -91,7 +91,8 @@ echo end send mail
 cd ..
 ```
 启动定时脚本`systemctl start cronie.service`
-每小时自动运行`crontab -l`
+
+  每小时自动运行`crontab -l`
   ```Bash
   0 * * * * /work/ali/shell/reply_homework.sh
 ```
