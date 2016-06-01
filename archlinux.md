@@ -92,9 +92,9 @@ cd ..
 ```
 启动定时脚本`$systemctl start cronie.service`
 
-  设置每小时自动运行`$crontab -l`  
+  设置每小时自动运行`$crontab -e`  
 ```Bash  
-`0 * * * * /work/ali/shell/reply_homework.sh`
+`0 * * * * /path/reply_homework.sh`
 ```
 
 - 查找含有某字符串的所有文件`grep -rni LogisticRegressionOutput*`
