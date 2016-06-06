@@ -24,14 +24,23 @@ END{
 sort file.txt |uniq -c |sort -nr|head -n 10
 ```
 
-- 天河二号中module配置
+- 天河二号中MXNet的module配置
 ```Bash
 #!/bin/bash
 module purge
-module load gcc/4.9.2 atlas/3.10.2 Python/2.7.9-gcc4.9.2 opencv/2.4.11 intel-compilers/15.0.1  intel-compilers/mkl-15 gmp/4.3.2 mpc/0.8.1 MPFR/2.4.2 ffmpeg/0.11.1 MPI/Gnu/MPICH/3.1-4.9.2
-module unload Python/2.7.9-fPIC Python/2.7.9
+module unload gcc/4.9.2
+module load gcc/5.2.0 glib/2.44.1 atlas/3.10.2 Python/2.7.9 opencv/2.4.11 gmp/4.3.2 mpc/0.8.1 MPFR/2.4.2 ffmpeg/0.11.1 atlas/3.10.2 atk/2.16.0 pango/1.37.0 pixman/0.32.6 libgphoto2/2.5.8 intel-compilers/15.0.1 cairo/1.14.2 intel-compilers/mkl-15 freetype/2.6 ffmpeg/0.11.1
 module list
-export PKG_CONFIG_PATH=/HOME/nsfc2015_304/share/pkgconfig 
+export PKG_CONFIG_PATH=/HOME/nsfc2015_304/share/pkgconfig
+```
+Caffe的module配置
+```Bash
+#!/bin/bash
+module purge
+module load caffe/v20160510-cpu3 java/jdk1.8.0_11 glibc/2.14 atlas/3.10.2 Python/2.7.9 gmp/4.3.2 mpc/0.8.1 MPFR/2.4.2 ffmpeg/0.11.1 MPI/Gnu/MPICH/3.1-4.9.2
+module unload Python/2.7.9-fPIC 
+module list
+export PKG_CONFIG_PATH=/HOME/nsfc2015_304/share/pkgconfig
 ```
 `pkgconfig`中放有
 ```Bash
