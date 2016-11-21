@@ -23,42 +23,6 @@ END{
 ```Bash
 sort file.txt |uniq -c |sort -nr|head -n 10
 ```
-
-- 天河二号中MXNet的module配置
-```Bash
-#!/bin/bash
-module purge
-module unload gcc/4.9.2
-module load gcc/5.2.0 glib/2.44.1 atlas/3.10.2 Python/2.7.9 opencv/2.4.11 gmp/4.3.2 mpc/0.8.1 MPFR/2.4.2 ffmpeg/0.11.1 atlas/3.10.2 atk/2.16.0 pango/1.37.0 pixman/0.32.6 libgphoto2/2.5.8 intel-compilers/15.0.1 cairo/1.14.2 intel-compilers/mkl-15 freetype/2.6 ffmpeg/0.11.1
-module list
-export PKG_CONFIG_PATH=/HOME/nsfc2015_304/share/pkgconfig
-```
-Caffe的module配置
-```Bash
-#!/bin/bash
-module purge
-module load caffe/v20160510-cpu3 java/jdk1.8.0_11 glibc/2.14 atlas/3.10.2 Python/2.7.9 gmp/4.3.2 mpc/0.8.1 MPFR/2.4.2 ffmpeg/0.11.1 MPI/Gnu/MPICH/3.1-4.9.2
-module unload Python/2.7.9-fPIC 
-module list
-export PKG_CONFIG_PATH=/HOME/nsfc2015_304/share/pkgconfig
-```
-`pkgconfig`中放有
-```Bash
-$ cat pkgconfig/opencv.pc 
-#Package Information for pkg-config
-prefix=/NSFCGZ/app/opencv/2.4.11
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir_old=${prefix}/include/opencv
-includedir_new=${prefix}/include
-Name: OpenCV
-Description: Open Source Computer Vision Library
-Version: 2.4.11
-Libs: -L${exec_prefix}/lib  -lopencv_stitching -lopencv_objdetect -lopencv_superres -lopencv_videostab -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_video -lopencv_photo -lopencv_ml -lopencv_imgproc -lopencv_flann -lopencv_core
-Libs.private: -L/lib64 -lwebp -lpng -lz -ltiff -ljasper -ljpeg -lImath -lIlmImf -lIex -lHalf -lIlmThread -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgthread-2.0 -lgstvideo-1.0 -lgstapp-1.0 -lgstbase-1.0 -lgstriff-1.0 -lgstpbutils-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -ldc1394 -lv4l1 -lv4l2 -lavcodec -lavformat -lavutil -lswscale -lavresample -lgphoto2 -lgphoto2_port -lexif -lbz2 -ldl -lm -lpthread -lrt
-Cflags: -I${includedir_old} -I${includedir_new}
-```
-
 - mutt自动收发邮件脚本 
   ```Bash
 #!/bin/bash
