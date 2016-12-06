@@ -127,3 +127,14 @@ cd ..
 `ps xH`:查看所有存在的线程。
 `ps -mp <PID>`:查看一个进程起的线程数。
 ```
+
+
+安装过程如果遇到permission denied的提示，就找到相应的文件，用chmod +x赋予其可执行权限
+
+The directory /tmp/mathworks_30038/sys/java/jre/glnxa64/jre/bin/java does not exist.
+/tmp/mathworks_30038/sys/java/jre/glnxa64/jre/bin/java does not appear to be a JRE directory.
+
+./install -javadir /NSFCGZ/app/java/jdk1.8.0_11/jre -inputFile installer_input.txt
+
+
+
