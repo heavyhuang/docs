@@ -76,7 +76,7 @@ roslaunch hector_slam_launch tutorial.launch
 rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
 ```
 
-![](https://github.com/heavyhuang/docs/blob/master/pic/ros-slam.png)
+![](/pic/ros-slam.png)
 
 ### 四．安装[ethzasl_icp_mapping](http://wiki.ros.org/ethzasl_icp_configuration)
 终端输入：

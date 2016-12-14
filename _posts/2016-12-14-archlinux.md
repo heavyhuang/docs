@@ -1,9 +1,10 @@
-----
+---
 layout: post
 title:  "Arch Linux随记"
 date:   2016-12-14 22:32:38 +0800
 categories: code
------------------
+---
+
 - pacman -Sc #清除现有安装包外pacman缓存
 
 - yaourt --noconfirm packge-name #自动编译安装，有时需输入密码

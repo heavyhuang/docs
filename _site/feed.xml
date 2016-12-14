@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-14T23:40:49+08:00</updated><id>http://localhost:4000//</id><title type="html">heavyhuang的个人笔记</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-15T00:07:14+08:00</updated><id>http://localhost:4000//</id><title type="html">heavyhuang的个人笔记</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry><title type="html">深入了解Java虚拟机学习笔记</title><link href="http://localhost:4000/jekyll/update/2016/12/14/jvm.html" rel="alternate" type="text/html" title="深入了解Java虚拟机学习笔记" /><published>2016-12-14T22:32:38+08:00</published><updated>2016-12-14T22:32:38+08:00</updated><id>http://localhost:4000/jekyll/update/2016/12/14/jvm</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2016/12/14/jvm.html">&lt;h2 id=&quot;一内存区域&quot;&gt;一.内存区域&lt;/h2&gt;
 &lt;h3 id=&quot;1程序计数器&quot;&gt;1.程序计数器&lt;/h3&gt;
 &lt;p&gt;线程私有，字节码的行号指示器，为了每个线程在CPU处理完后能恢复到正确位置。&lt;/p&gt;
@@ -382,7 +382,7 @@ rosdep update
 &lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/heavyhuang/docs/blob/master/pic/ros-slam.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/pic/ros-slam.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;四安装ethzasl_icp_mapping&quot;&gt;四．安装&lt;a href=&quot;http://wiki.ros.org/ethzasl_icp_configuration&quot;&gt;ethzasl_icp_mapping&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;终端输入：&lt;/p&gt;
@@ -507,13 +507,7 @@ RAID 50&lt;strong&gt;最少需要6个驱动器&lt;/strong&gt;，它最适合需�
   共享锁：允许一个事物读一行数据时，阻止其他的事物读取相同数据的排他锁。
   排他锁：允许获得排他锁的事物更新数据，阻止其他事物取得相同数据的共享锁和排他锁。
   意向共享锁：事物打算给数据行加行共享锁。事务在给一个数据行加共享锁前必须先取得该表的意向共享锁。
-  意向排他锁：事物打算给数据行加行排他锁。事物在给一个数据行加排他锁前必须先取得该表的意向排他锁。</summary></entry><entry><title type="html">Archlinux</title><link href="http://localhost:4000/2016/12/14/archlinux.html" rel="alternate" type="text/html" title="Archlinux" /><published>2016-12-14T00:00:00+08:00</published><updated>2016-12-14T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/14/archlinux</id><content type="html" xml:base="http://localhost:4000/2016/12/14/archlinux.html">&lt;hr /&gt;
-&lt;p&gt;layout: post
-title:  “Arch Linux随记”
-date:   2016-12-14 22:32:38 +0800
-categories: code
-—————–&lt;/p&gt;
-&lt;ul&gt;
+  意向排他锁：事物打算给数据行加行排他锁。事物在给一个数据行加排他锁前必须先取得该表的意向排他锁。</summary></entry><entry><title type="html">Arch Linux随记</title><link href="http://localhost:4000/code/2016/12/14/archlinux.html" rel="alternate" type="text/html" title="Arch Linux随记" /><published>2016-12-14T22:32:38+08:00</published><updated>2016-12-14T22:32:38+08:00</updated><id>http://localhost:4000/code/2016/12/14/archlinux</id><content type="html" xml:base="http://localhost:4000/code/2016/12/14/archlinux.html">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;pacman -Sc #清除现有安装包外pacman缓存&lt;/p&gt;
   &lt;/li&gt;
@@ -624,10 +618,4 @@ cd ..
 &lt;p&gt;The directory /tmp/mathworks_30038/sys/java/jre/glnxa64/jre/bin/java does not exist.
 /tmp/mathworks_30038/sys/java/jre/glnxa64/jre/bin/java does not appear to be a JRE directory.&lt;/p&gt;
 
-&lt;p&gt;./install -javadir /NSFCGZ/app/java/jdk1.8.0_11/jre -inputFile installer_input.txt&lt;/p&gt;</content><summary type="html">layout: post
-title:  “Arch Linux随记”
-date:   2016-12-14 22:32:38 +0800
-categories: code
-—————–
-
-  pacman -Sc #清除现有安装包外pacman缓存</summary></entry></feed>
+&lt;p&gt;./install -javadir /NSFCGZ/app/java/jdk1.8.0_11/jre -inputFile installer_input.txt&lt;/p&gt;</content><summary type="html">pacman -Sc #清除现有安装包外pacman缓存</summary></entry></feed>
