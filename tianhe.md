@@ -1,10 +1,5 @@
----
-layout: post
-title:  "天河二号使用说明"
-date:   2016-12-14 22:32:38 +0800
-categories: code
----
-
+# 天河二号使用说明 #
+-----------------
 ### Windows端登录
 
 1. 使用IE登录[超算接入平台](https://vpn2.nscc-gz.cn:6443)，按提示安装`SSLVPN`后输入用户名密码。

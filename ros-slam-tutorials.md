@@ -1,9 +1,6 @@
----
-layout: post
-title:  "ROS-SLAM配置教程"
-date:   2016-12-14 22:32:38 +0800
-categories: code
----
+[ROS-SLAM](http://wiki.ros.org/indigo/Installation)配置教程
+------------------------------------------------
+------------------------------------------------
 
 ### 一．arch上安装[ROS](http://wiki.ros.org/indigo/Installation/Arch)
 
@@ -76,7 +73,7 @@ roslaunch hector_slam_launch tutorial.launch
 rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
 ```
 
-![](/pic/ros-slam.png)
+![](https://github.com/heavyhuang/docs/blob/master/pic/ros-slam.png)
 
 ### 四．安装[ethzasl_icp_mapping](http://wiki.ros.org/ethzasl_icp_configuration)
 终端输入：
